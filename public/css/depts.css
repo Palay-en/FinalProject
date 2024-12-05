@@ -1,88 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-}
-
-/* Header styling */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid black;
-    height: 100px;
-    padding: 0 50px;
-}
-
-h1 {
-    font-size: 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-button {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #002b5c; /* College color */
+    color: #fff;
+}
+
+.logo {
+    height: 60px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logout-btn, .add-instructor-btn {
+    background-color: #fdb813; /* Secondary color */
+    color: #002b5c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-/* Logout button */
-.logout-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.logout-btn:hover, .add-instructor-btn:hover {
+    background-color: #e0a200;
 }
 
-.logout-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Add Instructor button */
-.add-instructor-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-}
-
-.add-instructor-btn:hover {
-    background-color: #218838;
-}
-
-/* Department Section */
 .depts {
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    height: calc(100vh - 120px); /* Adjust height */
-    padding: 20px;
+    justify-content: space-around;
+    margin: 20px;
 }
 
-.cit-dept {
-    width: 300px;
-    height: 150px;
-    border: 1px solid #ddd;
-    margin: 10px;
+.dept-card {
+    width: 200px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
-    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
-.cit-dept:hover {
-    background-color: #e0e0e0;
+.dept-card:hover {
+    transform: scale(1.05);
+    background-color: #e6e6e6;
 }
 
-/* Modal styling */
+.cit {
+    border-top: 5px solid #002b5c;
+}
+
+.cbm {
+    border-top: 5px solid #fdb813;
+}
+
+.cte {
+    border-top: 5px solid #7fba00;
+}
+
+.ccje {
+    border-top: 5px solid #ff4c4c;
+}
+
 .modal-overlay {
     display: none;
     position: fixed;
@@ -90,65 +92,16 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    animation: fadeIn 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal content styling */
 .modal {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: #fff;
-    border-radius: 8px;
+    background: white;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.modal h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.input-field,
-.select-field {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.submit-btn,
-.close-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.submit-btn:hover,
-.close-btn:hover {
-    background-color: #0056b3;
-}
-
-.close-btn {
-    background-color: red;
-}
-
-.close-btn:hover {
-    background-color: darkred;
-}
-
-/* Modal fade-in animation */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    border-radius: 8px;
+    width: 400px;
 }
