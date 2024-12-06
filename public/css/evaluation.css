@@ -26,7 +26,8 @@ table {
     margin-top: 20px;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
@@ -66,4 +67,101 @@ tr:hover {
 
 .btn-submit:hover {
     background-color: #0056b3;
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-info p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.user-info strong {
+    color: #cc9900;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button {
+    background-color: #cc9900;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #b58900;
+}
+
+/* Access Information Styling */
+main {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.evaluation-access {
+    background-color: #e6f2ff;
+    padding: 1rem;
+    border: 1px solid #003366;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.evaluation-access p {
+    margin: 0;
+    font-size: 1rem;
+    color: #003366;
+}
+
+ /* Access Denied Section */
+ .access-denied {
+    background-color: #ffe6e6; /* Light red background for warning */
+    padding: 2rem;
+    border: 1px solid #cc0000; /* Dark red border */
+    border-radius: 10px;
+    text-align: center;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.access-denied h1 {
+    margin: 0 0 1rem 0;
+    font-size: 1.8rem;
+    color: #cc0000; /* Bold red for title */
+}
+
+.access-denied p {
+    font-size: 1rem;
+    color: #333; /* Neutral text color for readability */
+    margin: 0.5rem 0;
+}
+
+.access-denied .contact-info {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666; /* Lighter text for additional info */
 }

@@ -7,20 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    Evaluation
-    <form action="/logout" method="POST">
-        @csrf
-        <button>Log Out</button>
-        <li>Welcome, {{ auth()->user()->name ?? auth()->user()->stud_id }}!</li>
-    </form>
-    @if(auth()->user()->can_evaluate == 1)
+<header>
+    <div class="header-container">
+        <div class="user-info">
+            <p>Welcome, <strong>{{ auth()->user()->name ?? auth()->user()->stud_id }}</strong>!</p>
+        </div>
+        <div class="logout">
+            <form action="/logout" method="POST">
+                @csrf
+                <button class="logout-button">Log Out</button>
+            </form>
+        </div>
+    </div>
+</header>
+@if(auth()->user()->can_evaluate == 1)
+    <main>
+        <div class="evaluation-access">
+            <p>You are authorized to complete the evaluation form.</p>
+        </div>
+    </main>
+
     <div class="container">
         <h1>Teacher Evaluation Form</h1>
         <form action="/submit-evaluation" method="POST">
         @csrf
 
             <div class="container">
-                <h1>Teacher Evaluation Form</h1>
                 <p>
                     Evaluate the following aspects of the teaching performance in terms of their capacity to provide quality education by marking “✓” in the box of the corresponding column according to the scale given: 
                     <br><strong>5 – Strongly Agree, 4 – Agree, 3 – Neutral, 2 – Disagree, 1 – Strongly Disagree</strong>
@@ -258,8 +270,11 @@
         </form>
     </div>
     @else
-    <h1>You are not authorized to fill out the evaluation form.</h1>
-    <p>Please contact your administrator for access.</p>
+    <div class="access-denied">
+        <h1>Access Denied</h1>
+        <p>You are not authorized to fill out the evaluation form.</p>
+        <p class="contact-info">Please contact your administrator for assistance.</p>
+    </div>
 @endif
 </body>
 <script>

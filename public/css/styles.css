@@ -5,11 +5,7 @@
 }
 
 body {
-	/* background-image: url('../assets/evaluation.jpeg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover; */
-	background-image: linear-gradient(to bottom, #252525, #ffffff);
+	background-image: linear-gradient(to bottom, #00264d, #ffffff); /* Deep blue to white gradient */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -17,11 +13,15 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+	color: #00264d; /* Dark Blue Text */
 }
 
 h1 {
 	font-weight: bold;
 	margin: 0;
+	/* /* color: white;
+	stroke: #001f3f;
+	stroke-width: 2px; */
 }
 
 p {
@@ -30,14 +30,16 @@ p {
 	line-height: 20px;
 	letter-spacing: 0.5px;
 	margin: 20px 0 30px;
+	/* color: #003f5c; */
 }
 
 span {
 	font-size: 12px;
+	color: #00264d;
 }
 
 a {
-	color: #333;
+	color: #00509e; /* Bright Blue Links */
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
@@ -45,15 +47,20 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #FFFFFF;
+	border: 1px solid #ffd700; /* Gold Border */
+	background-color: #ffd700; /* Gold Background */
+	color: #00264d; /* Dark Blue Text */
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+	transition: transform 80ms ease-in, background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #ffcc00; /* Lighter Gold on Hover */
+	color: #001f3f; /* Darker Blue Text */
 }
 
 button:active {
@@ -66,7 +73,8 @@ button:focus {
 
 button.ghost {
 	background-color: transparent;
-	border-color: #FFFFFF;
+	border-color: #ffd700; /* Gold Border */
+	color: #ffd700; /* Gold Text */
 }
 
 form {
@@ -80,19 +88,20 @@ form {
 	text-align: center;
 }
 
-input,select {
-	background-color: #eee;
-	border: none;
+input, select {
+	background-color: #f0f8ff; /* Alice Blue for Inputs */
+	border: 1px solid #00264d; /* Dark Blue Border */
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+	color: #00264d; /* Dark Blue Text */
 }
 
 .container {
-	background-color: #fff;
+	background-color: #ffffff; /* White Background */
 	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
+				0 10px 10px rgba(0, 0, 0, 0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -154,28 +163,26 @@ input,select {
 	z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
+.container.right-panel-active .overlay-container {
 	transform: translateX(-100%);
 }
 
 .overlay {
-	background: #ff0000;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #00264d, #00509e); /* Two-tone Blue Gradient */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
-	color: #FFFFFF;
+	color: #ffd700; /* Gold Text */
 	position: relative;
 	left: -100%;
 	height: 100%;
 	width: 200%;
-  	transform: translateX(0);
+	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
 
 .container.right-panel-active .overlay {
-  	transform: translateX(50%);
+	transform: translateX(50%);
 }
 
 .overlay-panel {
@@ -191,6 +198,7 @@ input,select {
 	width: 50%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
+	color: #ffd700; /* Gold Text */
 }
 
 .overlay-left {
@@ -215,7 +223,7 @@ input,select {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 1px solid #ffd700; /* Gold Border */
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
@@ -223,4 +231,5 @@ input,select {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+	color: #ffd700; /* Gold Icon Color */
 }

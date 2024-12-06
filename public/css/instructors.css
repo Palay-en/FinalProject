@@ -7,18 +7,19 @@
 
 /* Body and container */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #00264d; /* Deep blue text */
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffd700; /* Gold border */
 }
 
 /* Header */
@@ -28,8 +29,8 @@ header {
 }
 
 h1 {
-    font-size: 24px;
-    color: #333;
+    font-size: 26px;
+    color: #00264d; /* Deep blue text */
 }
 
 /* Logout button */
@@ -39,19 +40,20 @@ h1 {
 }
 
 .logout-btn {
-    background-color: #e74c3c;
-    color: white;
+    background-color: #e74c3c; /* Red button */
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .logout-btn:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; /* Darker red */
 }
 
-/* Section styles */
+/* Fieldset styles */
 .fieldset {
     margin-bottom: 20px;
     padding: 15px;
@@ -62,6 +64,7 @@ h1 {
 legend {
     font-weight: bold;
     margin-bottom: 10px;
+    color: #00509e; /* Bright blue legend */
 }
 
 .radio-item {
@@ -71,6 +74,7 @@ legend {
 .radio-label {
     display: block;
     margin-bottom: 5px;
+    color: #003f5c; /* Subtle blue text */
 }
 
 input[type="radio"] {
@@ -81,13 +85,14 @@ input[type="radio"] {
 .no-instructors {
     font-size: 18px;
     text-align: center;
-    color: #e74c3c;
+    color: #e74c3c; /* Red for alerts */
+    font-weight: bold;
 }
 
-/* Button */
+/* Submit button */
 .submit-btn {
-    background-color: #3498db;
-    color: white;
+    background-color: #00509e; /* Bright blue button */
+    color: #ffffff;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
@@ -95,8 +100,28 @@ input[type="radio"] {
     width: 100%;
     font-size: 16px;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: #2980b9;
+    background-color: #003f5c; /* Darker blue */
+}
+/* Back Button Styles */
+.back-btn-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background-color: #00509e; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #003f5c; /* Darker blue on hover */
 }
